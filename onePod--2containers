@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: devops
+spec:
+  containers:
+    - name: shree
+      image: ubuntu
+      command: ["/bin/bash", "-c" ,"while true; do echo hiiooo; sleep 2;done"]
+
+    - name: login
+      image: ubuntu
+      command:   ["/bin/bash", "-c" ,"while true; do echo ooooo; sleep 2;done"]
+

@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: flipkart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: Deployment
+  template:
+    metadata:
+      name: slogin
+      labels:
+        name: Deployment
+    spec:
+      containers:
+        - name: login
+          image: ubuntu                                                            //change
+          command: ["/bin/bash", "-c", "while true; do echo this is ver 2;done"]   //change
